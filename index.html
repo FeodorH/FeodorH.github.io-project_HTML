@@ -1,16 +1,366 @@
 <!DOCTYPE html>
-<HTML lang="ru">
-<HEAD>
-<TITLE>title</TITLE>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Montserrat', sans-serif; }
-    </style>
-</HEAD>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профессиональные инструменты | Магазин инструментов</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- =============================== -->
+    <!-- ШАПКА САЙТА С КАРТИНКОЙ (ВМЕСТО ВИДЕО) -->
+    <!-- =============================== -->
+    <header class="header">
+                
+        <!-- БЛОК ДЛЯ ВИДЕО (СЕЙЧАС ЗАКОММЕНТИРОВАН) -->
+        <!--
+        <video class="header-video" autoplay muted loop playsinline>
+            <source src="https://ссылка-на-ваше-видео.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        -->
+        
+        <!-- КАРТИНКА НА ФОНЕ (ИСПОЛЬЗУЕТСЯ СЕЙЧАС) -->
+        <!-- Это временное решение, пока не добавлю видео -->
+        <div class="header-bg" style="background-image: url('https://i.pinimg.com/originals/24/28/24/242824a8376916fbbb6df442d3a5ed1c.jpg');"></div>
+        
+        <!-- Затемнение для лучшей читаемости текста -->
+        <div class="header-overlay"></div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="logo">
+                    <i class="fas fa-tools"></i> ToolMaster
+                </a>
+                
+                <!-- Десктопное меню -->
+                <ul class="nav-menu">
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li class="dropdown">
+                        <a href="#">Категории <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Электроинструменты</a></li>
+                            <li><a href="#">Ручные инструменты</a></li>
+                            <li><a href="#">Садовая техника</a></li>
+                            <li><a href="#">Измерительные приборы</a></li>
+                            <li><a href="#">Строительное оборудование</a></li>
+                            <li><a href="#">Расходные материалы</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#testimonials">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                    <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+                    <button class="menu-toggle" aria-label="Открыть меню">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Мобильное меню -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <span>Меню</span>
+                <button class="menu-close"><i class="fas fa-times"></i></button>
+            </div>
+            <ul>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#">Категории</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#testimonials">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
+        
+        <!-- Заголовок в шапке -->
+        <div class="header-content">
+            <div class="container">
+                <h1 class="header-title">Профессиональные инструменты для любых задач</h1>
+                <p class="header-subtitle">Более 5000 товаров от ведущих мировых производителей с гарантией качества</p>
+                <div class="header-buttons">
+                    <a href="#catalog" class="btn btn-primary">Смотреть каталог</a>
+                    <a href="#services" class="btn btn-outline">Наши услуги</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<BODY>
+    <!-- =============================== -->
+    <!-- ОСНОВНОЕ СОДЕРЖИМОЕ САЙТА -->
+    <!-- =============================== -->
+    <main class="main">
+        <!-- Преимущества -->
+        <section class="section features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Гарантия качества</h3>
+                        <p>Все инструменты проходят проверку перед отправкой</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Быстрая доставка</h3>
+                        <p>Доставка по всей России от 1 дня</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Поддержка 24/7</h3>
+                        <p>Консультации по выбору и использованию</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Сервисный центр</h3>
+                        <p>Ремонт и обслуживание инструментов</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  Возможно, с вас будут собираться персональные данные(!)
-</BODY>
-</HTML>
-//oigjeowgjer[oigvje[';grfwg
+        <!-- Каталог инструментов -->
+        <section id="catalog" class="section catalog">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Популярные инструменты</h2>
+                    <p class="section-subtitle">Самые востребованные модели в нашем магазине</p>
+                    <div class="section-controls">
+                        <button class="filter-btn active">Все</button>
+                        <button class="filter-btn">Электроинструменты</button>
+                        <button class="filter-btn">Ручные</button>
+                        <button class="filter-btn">Садовая техника</button>
+                    </div>
+                </div>
+                
+                <div class="catalog-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/tool1.jpg" alt="Дрель профессиональная">
+                            <span class="product-badge">Хит</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Дрель ударная Makita</h3>
+                            <p class="product-description">Мощная дрель для профессионального использования</p>
+                            <div class="product-price">12 990 ₽</div>
+                            <button class="btn btn-primary btn-block">В корзину</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/tool2.jpg" alt="Шуруповерт">
+                            <span class="product-badge">Новинка</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Шуруповерт DeWalt</h3>
+                            <p class="product-description">Аккумуляторный, с двумя батареями</p>
+                            <div class="product-price">8 490 ₽</div>
+                            <button class="btn btn-primary btn-block">В корзину</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/tool3.jpg" alt="Бензопила">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Бензопила Husqvarna</h3>
+                            <p class="product-description">Профессиональная бензопила 50см³</p>
+                            <div class="product-price">24 990 ₽</div>
+                            <button class="btn btn-primary btn-block">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <a href="#" class="btn btn-outline btn-large">Весь каталог</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Услуги -->
+        <section id="services" class="section services">
+            <div class="container">
+                <h2 class="section-title">Наши услуги</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>Ремонт инструментов</h3>
+                        <p>Профессиональный ремонт любой сложности</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-toolbox"></i>
+                        </div>
+                        <h3>Аренда оборудования</h3>
+                        <p>Посуточная аренда строительного оборудования</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Обучение</h3>
+                        <p>Мастер-классы по работе с инструментами</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция отзывов -->
+        <section id="testimonials" class="section testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Отзывы наших клиентов</h2>
+                    <p class="section-subtitle">Реальные фотографии и отзывы от профессионалов</p>
+                </div>
+                
+                <!-- Контейнер для отзывов -->
+                <div class="testimonials-container" id="testimonials-slider">
+                    <!-- Отзыв 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="img/review1.jpg" alt="Отзыв клиента 1">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-text">
+                                "Отличный магазин! Купил дрель Makita - работает безупречно. 
+                                Доставка быстрая, сервис на высшем уровне!"
+                            </div>
+                            <div class="testimonial-author">
+                                <h4>Иван Петров</h4>
+                                <p>Профессиональный строитель</p>
+                                <div class="testimonial-date">15 января 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Отзыв 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="img/review2.jpg" alt="Отзыв клиента 2">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-text">
+                                "Заказывал садовую технику. Консультант помог выбрать 
+                                оптимальный вариант. Работает уже второй сезон без нареканий."
+                            </div>
+                            <div class="testimonial-author">
+                                <h4>Мария Смирнова</h4>
+                                <p>Владелец загородного дома</p>
+                                <div class="testimonial-date">8 февраля 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Отзыв 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="img/review3.jpg" alt="Отзыв клиента 3">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-text">
+                                "Пользуюсь инструментами от ToolMaster уже 3 года. 
+                                Качество на высоте, сервисный центр работает оперативно. 
+                                Рекомендую всем профессионалам!"
+                            </div>
+                            <div class="testimonial-author">
+                                <h4>Алексей Ковалев</h4>
+                                <p>Частный мастер</p>
+                                <div class="testimonial-date">25 марта 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма обратной связи -->
+        <section id="contacts" class="section contact-form">
+            <div class="container">
+                <div class="form-wrapper">
+                    <div class="form-content">
+                        <h2>Остались вопросы?</h2>
+                        <p>Наши специалисты свяжутся с вами в течение 15 минут</p>
+                        <form id="contactForm" class="form">
+                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="tel" placeholder="Ваш телефон" required>
+                            <input type="email" placeholder="Ваш email" required>
+                            <textarea placeholder="Ваш вопрос или комментарий" rows="4"></textarea>
+                            <button type="submit" class="btn btn-primary btn-block">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =============================== -->
+    <!-- ПОДВАЛ САЙТА -->
+    <!-- =============================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-tools"></i> ToolMaster</h3>
+                    <p>Магазин профессиональных инструментов </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="#">Электроинструменты</a></li>
+                        <li><a href="#">Ручные инструменты</a></li>
+                        <li><a href="#">Садовая техника</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> 8 (800) 555-35-35</p>
+                    <p><i class="fas fa-envelope"></i> info@toolmaster.ru</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Краснодар, ул. Ставропольская, 149</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; С вас будут собраны персональные данные .</p>
+                <p>Глазунов Вячеслав,Григорьев Вячеслав,Федор </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Плавающая кнопка для связи -->
+    <button id="contactPopupBtn" class="contact-fab">
+        <i class="fas fa-comments"></i>
+        <span>Задать вопрос</span>
+    </button>
+
+    <!-- Подключение JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
