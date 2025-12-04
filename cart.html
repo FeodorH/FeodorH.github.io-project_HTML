@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/script.js" defer></script>
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-bg" style="background-image: url('https://i.pinimg.com/originals/24/28/24/242824a8376916fbbb6df442d3a5ed1c.jpg');"></div>
+        <div class="header-overlay"></div>
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="logo">
+                    <i class="fas fa-tools"></i> ToolMaster
+                </a>
+
+                <!-- Десктопное меню -->
+                <ul class="nav-menu">
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li class="dropdown">
+                        <a href="#">Категории <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Электроинструменты</a></li>
+                            <li><a href="#">Ручные инструменты</a></li>
+                            <li><a href="#">Садовая техника</a></li>
+                            <li><a href="#">Измерительные приборы</a></li>
+                            <li><a href="#">Строительное оборудование</a></li>
+                            <li><a href="#">Расходные материалы</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#testimonials">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                    <a href="cart.html" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+                    <button class="menu-toggle" aria-label="Открыть меню">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Мобильное меню -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <span>Меню</span>
+                <button class="menu-close"><i class="fas fa-times"></i></button>
+            </div>
+            <ul>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#">Категории</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <!-- Обновленные ссылки -->
+                <li><a href="#testimonials">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
+        <!--Корзина-->
+        <div class="header-content">
+            <div class="container">
+                <section id="cart" class="header-title">
+                    <div id="empty-cart">
+                        <span>Корзина пуста</span>
+                    </div>
+                </section>
+                <div class="header-buttons">
+                    <a href="#catalog" class="btn btn-primary">Смотреть каталог</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <!-- Форма обратной связи -->
+        <section id="contacts" class="section contact-form">
+            <div class="container">
+                <div class="form-wrapper">
+                    <div class="form-content">
+                        <h2>Остались вопросы?</h2>
+                        <p>Наши специалисты свяжутся с вами в течение 15 минут</p>
+                        <form id="contactForm" class="form" method="POST" action="https://formcarry.com/s/QeSItmxKAGY" enctype="multipart/form-data">
+                            <!-- Скрытое поле для редиректа -->
+                            <input type="hidden" name="_gotcha">
+                            <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you.html">
+
+                            <input type="text" name="name" placeholder="Ваше имя" required minlength="2" maxlength="50">
+                            <input type="tel" name="phone" placeholder="Ваш телефон" required title="Пример: +7 (999) 123-45-67">
+                            <input type="email" name="email" placeholder="Ваш email" required>
+                            <textarea name="message" placeholder="Ваш вопрос или комментарий" rows="4" minlength="10" maxlength="500"></textarea>
+
+                            <!-- Состояние формы -->
+                            <div id="form-message" class="form-message"></div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                                <span class="btn-text">Отправить</span>
+                                <span class="btn-loader" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i> Отправка...
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =============================== -->
+    <!-- ПОДВАЛ САЙТА -->
+    <!-- =============================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-tools"></i> ToolMaster</h3>
+                    <p>Магазин профессиональных инструментов </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="#">Электроинструменты</a></li>
+                        <li><a href="#">Ручные инструменты</a></li>
+                        <li><a href="#">Садовая техника</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> 8 (800) 555-35-35</p>
+                    <p><i class="fas fa-envelope"></i> info@toolmaster.ru</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Краснодар, ул. Ставропольская, 149</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Возможно, с вас будут собираться персональные данные(!)</p>
+                <p>Глазунов Вячеслав,Григорьев Вячеслав,Фёдор Холкин</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Плавающая кнопка для связи -->
+    <button id="contactPopupBtn" class="contact-fab">
+        <i class="fas fa-comments"></i>
+        <span>Задать вопрос</span>
+    </button>
+</body>
