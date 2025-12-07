@@ -174,12 +174,14 @@ const Cart = {
 
 // ===== ИНИЦИАЛИЗАЦИЯ КНОПОК КОРЗИНЫ =====
 function initializeCartButtons() {
-    // Обработчики кнопок "В корзину" на главной странице
-    const addToCartButtons = document.querySelectorAll('#catalog .btn-primary');
+    // Обработчики кнопок "В корзину" с классом add-to-cart
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    
+    console.log('Найдено кнопок корзины:', addToCartButtons.length);
     
     if (addToCartButtons.length === 0) return;
     
-    addToCartButtons.forEach((button, index) => {
+    addToCartButtons.forEach((button) => {
         // Проверяем, не добавлен ли уже обработчик
         if (button.hasAttribute('data-cart-initialized')) return;
         
@@ -189,41 +191,28 @@ function initializeCartButtons() {
             e.preventDefault();
             e.stopPropagation();
             
-            const card = this.closest('.card');
-            const title = card.querySelector('.card-title').textContent;
-            const priceText = card.querySelector('.h4.text-primary').textContent;
+            const productId = this.getAttribute('data-product-id');
+            const name = this.getAttribute('data-product-name');
+            const price = parseInt(this.getAttribute('data-product-price')) || 0;
             
-            // Извлекаем цену из текста
-            const priceMatch = priceText.match(/(\d+[\s\d]*)/);
-            const price = priceMatch ? parseInt(priceMatch[0].replace(/\s/g, '')) : 0;
+            console.log('Добавление товара:', name, price, productId);
             
-            // ID товара - индекс + 1
-            const productId = `product_${index + 1}`;
+            // Добавляем в корзину
+            Cart.addToCart(productId, name, price);
             
-            Cart.addToCart(productId, title, price);
-        });
-    });
-    
-    // Также добавляем обработчики для кнопок в других разделах
-    const otherButtons = document.querySelectorAll('.card .btn-primary:not(#catalog .btn-primary)');
-    otherButtons.forEach((button, index) => {
-        if (button.hasAttribute('data-cart-initialized')) return;
-        
-        button.setAttribute('data-cart-initialized', 'true');
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
+            // Анимация кнопки
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check me-2"></i>Добавлено';
+            button.classList.remove('btn-primary');
+            button.classList.add('btn-success');
+            button.disabled = true;
             
-            const card = this.closest('.card');
-            const title = card.querySelector('.card-title')?.textContent || 'Товар';
-            const priceText = card.querySelector('.h4.text-primary')?.textContent || '0 ₽';
-            
-            const priceMatch = priceText.match(/(\d+[\s\d]*)/);
-            const price = priceMatch ? parseInt(priceMatch[0].replace(/\s/g, '')) : 0;
-            
-            const productId = `other_${Date.now()}_${index}`;
-            
-            Cart.addToCart(productId, title, price);
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.classList.remove('btn-success');
+                button.classList.add('btn-primary');
+                button.disabled = false;
+            }, 1500);
         });
     });
 }
