@@ -21,7 +21,6 @@
             min-height: 400px;
             position: relative;
             overflow: hidden;
-            margin-top: 76px;
         }
         
         .video-container {
@@ -43,7 +42,6 @@
             .video-background {
                 height: 40vh;
                 min-height: 300px;
-                margin-top: 56px;
             }
         }
         
@@ -248,7 +246,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Дрель ударная Makita</h5>
-                            <p class="card-text">Мощная дрель для профессионального использования</p>
+                            <p class="card-text">Дрель для профессионального использования</p>
                             <p class="h4 text-primary">12 990 ₽</p>
                             <button class="btn btn-primary w-100">В корзину</button>
                         </div>
@@ -313,158 +311,162 @@
             </div>
         </section>
         
-        <!-- Отзывы -->
-        <section id="testimonials" class="mb-5">
-            <h2 class="text-center mb-4">Отзывы наших клиентов</h2>
-            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row justify-content-center">
-                            <div class="col-md-8">
-                                <div class="card border-0 shadow">
-                                    <div class="row g-0">
-                                        <div class="col-md-5">
-                                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                                                 class="img-fluid rounded-start testimonial-img" alt="Клиент 1">
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="card-body p-4">
-                                                <div class="testimonial-text mb-3">
-                                                    <i class="fas fa-quote-left text-primary me-2"></i>
-                                                    Отличный магазин! Купил дрель Makita - работает безупречно. 
-                                                    Доставка быстрая, сервис на высшем уровне!
-                                                    <i class="fas fa-quote-right text-primary ms-2"></i>
-                                                </div>
-                                                <div class="testimonial-author">
-                                                    <h5 class="mb-1">Иван Петров</h5>
-                                                    <p class="text-muted mb-0">Профессиональный строитель</p>
-                                                    <small class="text-muted">15 января 2024</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+        <section id="testimonials" class="section testimonials py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title mb-2">Отзывы наших клиентов</h2>
+                    <p class="section-subtitle text-muted">Реальные фотографии и отзывы от профессионалов</p>
+                </div>
+                
+                <!-- Контейнер слайдера -->
+                <div class="testimonials-slider-wrapper position-relative">
+                    <!-- Кнопки навигации -->
+                    <button class="slider-btn slider-prev position-absolute" aria-label="Предыдущий отзыв">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn slider-next position-absolute" aria-label="Следующий отзыв">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Контейнер для отзывов -->
+                    <div class="testimonials-slider">
+                        <!-- Слайд 1 -->
+                        <div class="testimonial-slide active d-flex flex-column flex-md-row">
+                            <div class="testimonial-image col-md-5 p-0 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                                     class="img-fluid w-100 h-100 object-fit-cover" alt="Отзыв клиента 1">
+                            </div>
+                            <div class="testimonial-content col-md-7 p-4 p-md-5 d-flex flex-column">
+                                <div class="testimonial-text mb-4 flex-grow-1">
+                                    "Отличный магазин! Купил дрель Makita - работает безупречно. 
+                                    Доставка быстрая, сервис на высшем уровне!"
+                                </div>
+                                <div class="testimonial-author pt-3 mt-auto">
+                                    <h4 class="mb-1">Иван Петров</h4>
+                                    <p class="text-muted mb-1">Профессиональный строитель</p>
+                                    <div class="testimonial-date">15 января 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Слайд 2 -->
+                        <div class="testimonial-slide d-flex flex-column flex-md-row">
+                            <div class="testimonial-image col-md-5 p-0 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                     class="img-fluid w-100 h-100 object-fit-cover" alt="Отзыв клиента 2">
+                            </div>
+                            <div class="testimonial-content col-md-7 p-4 p-md-5 d-flex flex-column">
+                                <div class="testimonial-text mb-4 flex-grow-1">
+                                    "Заказывал садовую технику. Консультант помог выбрать 
+                                    оптимальный вариант. Работает уже второй сезон без нареканий."
+                                </div>
+                                <div class="testimonial-author pt-3 mt-auto">
+                                    <h4 class="mb-1">Олег Николаев</h4>
+                                    <p class="text-muted mb-1">Владелец загородного дома</p>
+                                    <div class="testimonial-date">8 февраля 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Слайд 3 -->
+                        <div class="testimonial-slide d-flex flex-column flex-md-row">
+                            <div class="testimonial-image col-md-5 p-0 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                     class="img-fluid w-100 h-100 object-fit-cover" alt="Отзыв клиента 3">
+                            </div>
+                            <div class="testimonial-content col-md-7 p-4 p-md-5 d-flex flex-column">
+                                <div class="testimonial-text mb-4 flex-grow-1">
+                                    "Пользуюсь инструментами от ToolMaster уже 3 года. 
+                                    Качество на высоте, сервисный центр работает оперативно. 
+                                    Рекомендую всем профессионалам!"
+                                </div>
+                                <div class="testimonial-author pt-3 mt-auto">
+                                    <h4 class="mb-1">Алексей Ковалев</h4>
+                                    <p class="text-muted mb-1">Частный мастер</p>
+                                    <div class="testimonial-date">25 марта 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Слайд 4 -->
+                        <div class="testimonial-slide d-flex flex-column flex-md-row">
+                            <div class="testimonial-image col-md-5 p-0 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                                     class="img-fluid w-100 h-100 object-fit-cover" alt="Отзыв клиента 4">
+                            </div>
+                            <div class="testimonial-content col-md-7 p-4 p-md-5 d-flex flex-column">
+                                <div class="testimonial-text mb-4 flex-grow-1">
+                                    "Ремонтировал у вас перфоратор. Сделали всё качественно и быстро. 
+                                    Цены адекватные, мастера вежливые. Буду обращаться ещё!"
+                                </div>
+                                <div class="testimonial-author pt-3 mt-auto">
+                                    <h4 class="mb-1">Дмитрий Соколов</h4>
+                                    <p class="text-muted mb-1">Ремонтная бригада</p>
+                                    <div class="testimonial-date">10 апреля 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Слайд 5 -->
+                        <div class="testimonial-slide d-flex flex-column flex-md-row">
+                            <div class="testimonial-image col-md-5 p-0 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                                     class="img-fluid w-100 h-100 object-fit-cover" alt="Отзыв клиента 5">
+                            </div>
+                            <div class="testimonial-content col-md-7 p-4 p-md-5 d-flex flex-column">
+                                <div class="testimonial-text mb-4 flex-grow-1">
+                                    "Брала в аренду строительное оборудование на неделю. 
+                                    Всё работает исправно, оформление документов заняло 10 минут. 
+                                    Очень удобно!"
+                                </div>
+                                <div class="testimonial-author pt-3 mt-auto">
+                                    <h4 class="mb-1">Мария Смирнова</h4>
+                                    <p class="text-muted mb-1">Дизайнер интерьеров</p>
+                                    <div class="testimonial-date">5 мая 2024</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
-                            <div class="col-md-8">
-                                <div class="card border-0 shadow">
-                                    <div class="row g-0">
-                                        <div class="col-md-5">
-                                            <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                                                 class="img-fluid rounded-start testimonial-img" alt="Клиент 2">
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="card-body p-4">
-                                                <div class="testimonial-text mb-3">
-                                                    <i class="fas fa-quote-left text-primary me-2"></i>
-                                                    Заказывал садовую технику. Консультант помог выбрать 
-                                                    оптимальный вариант. Работает уже второй сезон без нареканий.
-                                                    <i class="fas fa-quote-right text-primary ms-2"></i>
-                                                </div>
-                                                <div class="testimonial-author">
-                                                    <h5 class="mb-1">Олег Николаев</h5>
-                                                    <p class="text-muted mb-0">Владелец загородного дома</p>
-                                                    <small class="text-muted">8 февраля 2024</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
-                            <div class="col-md-8">
-                                <div class="card border-0 shadow">
-                                    <div class="row g-0">
-                                        <div class="col-md-5">
-                                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                                                 class="img-fluid rounded-start testimonial-img" alt="Клиент 3">
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="card-body p-4">
-                                                <div class="testimonial-text mb-3">
-                                                    <i class="fas fa-quote-left text-primary me-2"></i>
-                                                    Пользуюсь инструментами от ToolMaster уже 3 года. 
-                                                    Качество на высоте, сервисный центр работает оперативно. 
-                                                    Рекомендую всем профессионалам!
-                                                    <i class="fas fa-quote-right text-primary ms-2"></i>
-                                                </div>
-                                                <div class="testimonial-author">
-                                                    <h5 class="mb-1">Алексей Ковалев</h5>
-                                                    <p class="text-muted mb-0">Частный мастер</p>
-                                                    <small class="text-muted">25 марта 2024</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    
+                    <!-- Индикаторы (точки) -->
+                    <div class="slider-dots d-flex justify-content-center gap-2 mt-4">
+                        <button class="slider-dot active" data-slide="0"></button>
+                        <button class="slider-dot" data-slide="1"></button>
+                        <button class="slider-dot" data-slide="2"></button>
+                        <button class="slider-dot" data-slide="3"></button>
+                        <button class="slider-dot" data-slide="4"></button>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Предыдущий</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Следующий</span>
-                </button>
             </div>
         </section>
         
         <!-- Форма обратной связи -->
-        <section id="contacts" class="mb-5">
-            <h2 class="text-center mb-4">Остались вопросы?</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card border-0 shadow">
-                        <div class="card-body p-4 p-md-5">
-                            <p class="text-center text-muted mb-4">Наши специалисты свяжутся с вами в течение 15 минут</p>
+        <section id="contacts" class="section contact-form">
+            <div class="container">
+                <div class="form-wrapper">
+                    <div class="form-content">
+                        <h2>Остались вопросы?</h2>
+                        <p>Наши специалисты свяжутся с вами в течение 15 минут</p>
+                        <form id="contactForm" class="form" method="POST" action="https://formcarry.com/s/QeSItmxKAGY" enctype="multipart/form-data">
+                            <!-- Скрытое поле для редиректа -->
+                            <input type="hidden" name="_gotcha">
+                            <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you.html">
                             
-                            <form id="contactForm" method="POST" action="https://formcarry.com/s/QeSItmxKAGY">
-                                <input type="hidden" name="_gotcha">
-                                <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you.html">
-                                
-                                <div class="row g-3 mb-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" name="name" placeholder="Ваше имя" required>
-                                            <label for="name">Ваше имя *</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Ваш телефон" required>
-                                            <label for="phone">Ваш телефон *</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Ваш email" required>
-                                        <label for="email">Ваш email *</label>
-                                    </div>
-                                </div>
-                                
-                                <div class="mb-4">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" id="message" name="message" placeholder="Ваш вопрос или комментарий" style="height: 120px"></textarea>
-                                        <label for="message">Ваш вопрос или комментарий</label>
-                                    </div>
-                                </div>
-                                
-                                <button type="submit" class="btn btn-primary btn-lg w-100">
-                                    Отправить
-                                </button>
-                            </form>
-                        </div>
+                            <input type="text" name="name" placeholder="Ваше имя" required minlength="2" maxlength="50">
+                            <input type="tel" name="phone" placeholder="Ваш телефон" required title="Пример: +7 (999) 123-45-67">
+                            <input type="email" name="email" placeholder="Ваш email" required>
+                            <textarea name="message" placeholder="Ваш вопрос или комментарий" rows="4" minlength="10" maxlength="500"></textarea>
+                            
+                            <!-- Состояние формы -->
+                            <div id="form-message" class="form-message"></div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                                <span class="btn-text">Отправить</span>
+                                <span class="btn-loader" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i> Отправка...
+                                </span>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -107,29 +107,6 @@ body {
     animation: fadeIn 0.6s ease forwards;
 }
 
-/* Отзывы */
-.testimonial-text {
-    position: relative;
-    padding-left: 30px;
-}
-
-.testimonial-text i {
-    position: absolute;
-    left: 0;
-    top: -15px;
-}
-
-/* Форма */
-.form-control {
-    border: 2px solid transparent;
-    transition: var(--transition);
-}
-
-.form-control:focus {
-    border-color: var(--secondary);
-    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
-}
-
 /* Кнопка Fab */
 .btn-primary {
     background-color: var(--secondary);
@@ -142,7 +119,355 @@ body {
     transform: translateY(-2px);
 }
 
-/* Адаптивность */
+/* ===== TESTIMONIALS SLIDER ===== */
+.testimonials-slider-wrapper {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    position: relative;
+}
+
+.testimonials-slider {
+    transition: transform 0.5s ease-in-out;
+    min-height: 400px;
+}
+
+.testimonial-slide {
+    background: var(--light);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; /* Добавьте это */
+    margin: 0 auto; /* Центрирование */
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+.testimonial-image img {
+    transition: transform 0.5s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-slide:hover .testimonial-image img {
+    transform: scale(1.05);
+}
+
+.testimonial-text {
+    color: var(--dark);
+    font-style: italic;
+    position: relative;
+    padding-left: 20px;
+}
+
+.testimonial-text:before {
+    content: '"';
+    font-size: 40px;
+    color: var(--secondary);
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+
+.testimonial-author {
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.testimonial-author p {
+    color: var(--gray);
+}
+
+.testimonial-date {
+    color: #95a5a6;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Кнопки слайдера */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--dark);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    z-index: 20;
+    transition: var(--transition);
+}
+
+.slider-btn:hover {
+    background: var(--secondary);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-prev {
+    left: 15px;
+}
+
+.slider-next {
+    right: 15px;
+}
+
+/* Индикаторы (точки) */
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0;
+}
+
+.slider-dot.active {
+    background: var(--secondary);
+    transform: scale(1.2);
+}
+
+.slider-dot:hover {
+    background: var(--secondary);
+}
+
+/* Анимация появления слайда */
+.testimonial-slide.active {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form {
+    padding: 100px 0;
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9));
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-content h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.form-content p {
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form input,
+.form textarea {
+    padding: 15px;
+    border-radius: 4px;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+/* ===== FORM MESSAGES ===== */
+.form-message {
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+    display: none;
+    font-weight: 500;
+}
+
+.form-message.success {
+    background-color: rgba(46, 204, 113, 0.1);
+    border: 1px solid #2ecc71;
+    color: #27ae60;
+    display: block;
+}
+
+.form-message.error {
+    background-color: rgba(231, 76, 60, 0.1);
+    border: 1px solid #e74c3c;
+    color: #c0392b;
+    display: block;
+}
+
+.form-message.info {
+    background-color: rgba(52, 152, 219, 0.1);
+    border: 1px solid #3498db;
+    color: #2980b9;
+    display: block;
+}
+
+/* Стили для инпутов с ошибкой */
+.form input.error,
+.form textarea.error {
+    border: 2px solid #e74c3c !important;
+    background-color: rgba(231, 76, 60, 0.05);
+}
+
+.form input.valid,
+.form textarea.valid {
+    border: 2px solid #2ecc71 !important;
+    background-color: rgba(46, 204, 113, 0.05);
+}
+
+/* Стили для кнопки загрузки */
+.btn-loader {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Стили для плавного скролла */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Отступ для фиксированной шапки */
+}
+
+/* Дополнительные стили для меню */
+.nav-menu a.active {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE STYLES FOR SLIDER ===== */
+
+/* Десктоп версия слайдера (от 992px) */
+@media (min-width: 992px) {
+    .testimonial-slide {
+        min-height: 500px;
+    }
+    
+    .slider-prev {
+        left: -60px;
+    }
+    
+    .slider-next {
+        right: -60px;
+    }
+}
+
+/* Планшетная версия слайдера (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .testimonial-slide {
+        min-height: 450px;
+    }
+    
+    .slider-btn {
+        background: rgba(255, 255, 255, 0.9);
+    }
+    
+    .slider-prev {
+        left: 20px;
+    }
+    
+    .slider-next {
+        right: 20px;
+    }
+}
+
+/* Мобильная версия слайдера (до 767px) */
+@media (max-width: 767px) {
+    .testimonial-slide {
+        min-height: 600px;
+    }
+    
+    .testimonial-slide .testimonial-image {
+        height: 250px;
+        flex-shrink: 0;
+    }
+    
+    .testimonial-slide .testimonial-content {
+        padding: 25px;
+    }
+    
+    .testimonial-text {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .testimonial-text:before {
+        font-size: 30px;
+        top: -5px;
+    }
+    
+    .slider-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .slider-prev {
+        left: 15px;
+        top: 125px;
+    }
+    
+    .slider-next {
+        right: 15px;
+        top: 125px;
+    }
+}
+
+/* Очень маленькие экраны (до 576px) для слайдера */
+@media (max-width: 576px) {
+    .testimonial-slide {
+        min-height: 500px;
+    }
+    
+    .testimonial-slide .testimonial-image {
+        height: 200px;
+    }
+    
+    .testimonial-slide .testimonial-content {
+        padding: 20px;
+    }
+    
+    .testimonial-text {
+        font-size: 15px;
+        padding-left: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .testimonial-text:before {
+        font-size: 30px;
+        top: -5px;
+    }
+    
+    /* Корректируем позицию кнопок */
+    .slider-prev,
+    .slider-next {
+        top: 100px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* Общие адаптивные стили */
 @media (max-width: 768px) {
     .header h1 {
         font-size: 2rem;
