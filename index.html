@@ -21,6 +21,7 @@
             min-height: 400px;
             position: relative;
             overflow: hidden;
+            background: #000; /* Фон на случай загрузки */
         }
         
         .video-container {
@@ -31,10 +32,11 @@
             height: 100%;
         }
         
-        .video-container iframe {
+        .video-container video {
             width: 100%;
             height: 100%;
-            border: none;
+            object-fit: cover; /* Ключевое свойство! */
+            object-position: center; /* Центрируем видео */
         }
         
         /* Адаптивность */
@@ -166,12 +168,10 @@
     <!-- ВИДЕО В ШАПКЕ -->
     <section id="home" class="video-background">
         <div class="video-container">
-            <iframe 
-                src="https://rutube.ru/play/embed/c4ab83aeb79010965fd9b6378624edbb?autoplay=1&muted=1"
-                allow="autoplay; encrypted-media" 
-                allowfullscreen
-                title="Видео о инструментах">
-            </iframe>
+            <video controls loop autoplay>
+  	    	<source src="assets/main_video.mp4" type="video/mp4">
+  	    	Ваш браузер не поддерживает видео тег.
+	    </video>
         </div>
     </section>
 
