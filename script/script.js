@@ -257,9 +257,18 @@ function initializeSlider() {
         showSlide(currentSlide - 1);
     }
     
-    // Обработчики событий
-    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    // Обработчики событий для кнопок
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+        });
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+        });
+    }
     
     // Переход по точкам
     dots.forEach(dot => {
@@ -268,25 +277,18 @@ function initializeSlider() {
         });
     });
     
-    // Автопрокрутка каждые 5 секунд
-    const autoSlideInterval = setInterval(nextSlide, 5000);
-    
-    // Остановка автопрокрутки при наведении
-    const sliderWrapper = document.querySelector('.testimonials-slider-wrapper');
-    if (sliderWrapper) {
-        sliderWrapper.addEventListener('mouseenter', () => {
-            clearInterval(autoSlideInterval);
-        });
-        
-        sliderWrapper.addEventListener('mouseleave', () => {
-            setInterval(nextSlide, 5000);
-        });
-    }
-    
-    // Инициализация
+    // Инициализация - показываем первый слайд
     showSlide(0);
+    
+    // Дополнительно: можно добавить управление клавиатурой
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+            nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+            prevSlide();
+        }
+    });
 }
-
 // ===== ФУНКЦИИ ДЛЯ ФОРМЫ =====
 function initializeForm() {
     const contactForm = document.getElementById('contactForm');
