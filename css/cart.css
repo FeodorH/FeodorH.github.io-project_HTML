@@ -1,117 +1,36 @@
+/* css/cart.css */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    padding-top: 76px; /* Для фиксированной навигации */
+    background-color: #f8f9fa;
+    padding-top: 80px;
 }
 
-/* Навигация */
-.navbar {
-    transition: var(--transition);
+.cart {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-    .navbar.scrolled {
-        background: var(--dark) !important;
-        box-shadow: var(--shadow);
-    }
-
-
-/* Анимации */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.cart-item__btn-dec-count,
+.cart-item__btn-inc-count,
+.cart-item__btn-remove {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s;
 }
 
-.fade-in {
-    animation: fadeIn 0.6s ease forwards;
+.cart-item__btn-dec-count:hover,
+.cart-item__btn-inc-count:hover {
+    background-color: #e9ecef;
 }
 
-/* Стили для плавного скролла */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Отступ для фиксированной шапки */
+.cart-item__btn-remove:hover {
+    background-color: #dc3545;
+    color: white;
 }
 
-/* Дополнительные стили для меню */
-.nav-menu a.active {
-    color: var(--secondary);
-    font-weight: 600;
-}
-
-.product-image {
-    height: 200px;
-    overflow: hidden;
-}
-
-    .product-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-.testimonial-img {
-    height: 250px;
-    object-fit: cover;
-}
-
-.navbar-brand i {
-    color: #3498db;
-}
-
-/* Стили для футера */
-.footer-links a {
-    color: rgba(255,255,255,0.8);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-    .footer-links a:hover {
-        color: #3498db;
-    }
-
-/* Общие адаптивные стили */
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 2rem;
-    }
-
-    .carousel-control-prev {
-        left: 10px;
-    }
-
-    .carousel-control-next {
-        right: 10px;
-    }
-
-    body {
-        padding-top: 56px;
-    }
-}
-
-@media (max-width: 576px) {
-    .header {
-        min-height: 500px;
-    }
-
-        .header h1 {
-            font-size: 1.8rem;
-        }
-}
-.main {
-    padding-bottom: 600px
-}
-@media (max-width: 425px){
-    .main {
-        padding-bottom: 300px
-    }
-
-    .header {
-        min-height: 20px;
-    }
+#order {
+    padding: 12px 30px;
+    font-size: 18px;
 }
