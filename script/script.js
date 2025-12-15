@@ -1,6 +1,5 @@
-// ===== КОРЗИНА =====
+// Функции для корзины
 const Cart = {
-    // Ключ для localStorage
     STORAGE_KEY: 'toolmaster_cart',
     
     // Инициализация корзины
@@ -172,7 +171,7 @@ const Cart = {
     }
 };
 
-// ===== ИНИЦИАЛИЗАЦИЯ КНОПОК КОРЗИНЫ =====
+// Функции инициализации кнопок коззины
 function initializeCartButtons() {
     // Обработчики кнопок "В корзину" с классом add-to-cart
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
@@ -217,7 +216,7 @@ function initializeCartButtons() {
     });
 }
 
-// ===== ФУНКЦИИ ДЛЯ СЛАЙДЕРА =====
+// Функции для слайдера
 function initializeSlider() {
     const slides = document.querySelectorAll('.testimonial-slide');
     const dots = document.querySelectorAll('.slider-dot');
@@ -289,7 +288,7 @@ function initializeSlider() {
         }
     });
 }
-// ===== ФУНКЦИИ ДЛЯ ФОРМЫ =====
+// Функции для формы
 function initializeForm() {
     const contactForm = document.getElementById('contactForm');
     if (!contactForm) return;
@@ -436,7 +435,7 @@ function initializeForm() {
     });
 }
 
-// ===== ФУНКЦИИ ДЛЯ НАВИГАЦИИ =====
+// Фунцкции для навигации
 function initializeNavigation() {
     // Плавная прокрутка
     document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -462,23 +461,15 @@ function initializeNavigation() {
     });
 }
 
-// ===== ИНИЦИАЛИЗАЦИЯ =====
+// Инициализация всего
 document.addEventListener('DOMContentLoaded', () => {
-    // Инициализируем корзину
     Cart.init();
     
-    // Инициализируем кнопки корзины
     initializeCartButtons();
     
-    // Инициализируем слайдер
     initializeSlider();
     
-    // Инициализируем форму
     initializeForm();
     
-    // Инициализируем навигацию
     initializeNavigation();
-    
-    // Выпадающие меню Bootstrap уже работают через Bootstrap JS
-    // Дополнительная инициализация не требуется
 });
