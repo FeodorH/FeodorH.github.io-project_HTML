@@ -1,5 +1,3 @@
-// script/cart.js
-// Корзина (та же самая объект, что и в script.js)
 const Cart = {
     STORAGE_KEY: 'toolmaster_cart',
     
